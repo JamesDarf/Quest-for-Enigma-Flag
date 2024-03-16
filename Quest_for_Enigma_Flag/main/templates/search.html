@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bot - Search</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 60px; /* Adjusted top padding for fixed navbar */
+      background-color: #f8f9fa; /* Light background color */
+      color: #343a40; /* Text color */
+    }
+    .navbar {
+      background-color: #007bff; /* Navbar color */
+      border-color: #007bff;
+      color: #ffffff; /* Navbar text color */
+    }
+    .navbar-brand, .navbar-nav li a {
+      color: #ffffff !important; /* Navbar text color */
+    }
+    .navbar-brand:hover, .navbar-nav li a:hover {
+      color: #f8f9fa !important; /* Navbar text color on hover */
+    }
+    .container {
+      margin-top: 5px; /* Add some margin at the top */
+    }
+    h2, h3 {
+      color: #007bff; /* Heading color */
+    }
+    .form-group {
+      margin-bottom: 15px; /* Add margin to form group */
+    }
+    .form-control {
+      width: 300px; /* Adjust input width */
+    }
+    .btn-primary {
+      background-color: #007bff; /* Button color */
+      border-color: #007bff;
+    }
+    iframe {
+      width: 100%; /* Make iframe full width */
+      height: 300px; /* Set a fixed height for iframe */
+      border: 1px solid #007bff; /* Add a border */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Quest for Enigma Flag</a>
+      </div>
+      <div id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <!-- Add any right-aligned navbar items here -->
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>검색중................</h2>
+    <h3>"{{ query }}" 검색 결과를 찾겠습니다..1..2.3</h3>
+    <iframe srcdoc="<pre>{{ result }}</pre>"></iframe>
+    <form method="GET" class="form-inline">
+      <div class="form-group">
+        <label class="sr-only" for="query">Query: </label>
+        <input type="text" class="form-control" id="query" name="query" placeholder="query">
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS and jQuery (optional, if needed) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

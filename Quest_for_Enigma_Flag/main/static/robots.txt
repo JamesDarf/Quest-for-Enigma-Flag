@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /index
+flag is Heri5H_thi5_aCHiev3meNT}
